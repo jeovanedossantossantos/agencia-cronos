@@ -2,53 +2,141 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-   
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=cronosice-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CRONOS AGÊNCIA - admin</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/estilo.css" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
 </head>
 
-<body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<div id="root">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-</body>
+    <body>
+        <header>
+            <div class="container">
+                <a href="#">
+                    <img src="imagens/CRONOS-logo-white.png" alt="Agência CRONOS" />
+                </a>
+                <h1>Painel administrativo</h1>
+            </div>
+        </header>
+
+        <section id="servicos" class="py-5 mb-5">
+            <div class="container" id="container">
+
+
+
+
+                <div class="row">
+                    <div class="col">
+
+
+                        <div class="modal fade bd-example-modal-lg" id="edicao" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <h1 class="m-auto">Editar</h1>
+                                    <form id="formulario2">
+                                        <div class="form-group m-3">
+                                            <label for="cronosNameED mr-3">Nome</label>
+                                            <input type="text" class="form-control mr-3" id="cronosNameED" placeholder="Nome do curso">
+                                        </div>
+
+                                        <div class="form-group m-3">
+                                            <label for="cronosNameED mr-3">Coloque o link da sua imagem</label>
+                                            <input type="text" class="form-control mr-3" id="cronosImageED" placeholder="Coloque o link da sua imagem">
+                                        </div>
+
+
+                                        <div class="form-group m-3">
+                                            <label for="cronosDesED mr-3">Descrição</label>
+                                            <textarea class="form-control " id="cronosDesED" rows="3"></textarea>
+                                        </div>
+
+                                        <button id="btnEnviar" class="btn btn-success m-3" onclick="salvar()">Salvar</button>
+                                        <button onclick="" class="btn btn-danger mr-3">Cancelar</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="modal fade cadastra" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <h1 class="m-auto">Cadastra</h1>
+                                    <form id="formulario">
+                                        <div class="form-group m-3">
+                                            <label for="cronosName mr-3">Nome</label>
+                                            <input type="text" class="form-control mr-3" id="cronosName" placeholder="Nome do curso">
+                                        </div>
+                                        <div class="form-group m-3">
+                                            <label for="cronosNameED mr-3">Coloque o link da sua imagem</label>
+                                            <input type="text" class="form-control mr-3" id="cronosImage" placeholder="Coloque o link da sua imagem">
+                                        </div>
+
+                                        <div class="form-group m-3">
+                                            <label for="cronosDes mr-3">Descrição</label>
+                                            <textarea class="form-control " id="cronosDes" rows="3"></textarea>
+                                        </div>
+
+                                        <button id="btnEnviar" class="btn btn-success m-3" onclick=salvar()>Salvar</button>
+                                        <button class="btn btn-danger mr-3">Cancelar</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <h3>Serviços</h3>
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".cadastra">Adicionar
+                            novo</button>
+
+                        <table class="table my-5">
+                            <thead>
+                                <tr>
+                                    <td>Nome</td>
+                                    <td>Imagem</td>
+                                    <td>Descrição</td>
+                                    <td>Ações</td>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <footer class="py-3 bg-light">
+            <div class="container text-center">
+                <p class="m-0">
+                    copyright 2021 agência CRONOS
+                </p>
+            </div>
+        </footer>
+
+        <script src="t.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    </body>
+
+</div>
 
 </html>
