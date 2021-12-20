@@ -29,6 +29,58 @@ function getNameEdicao() {
     return this.key
 }
 
+// Função que exclui os cursos
+function excluir(key) {
+
+    // let lista = []
+    let ob = JSON.parse(localStorage.getItem(localStorage.key(0)));
+
+    if (localStorage.hasOwnProperty("itens")) {
+        itens = JSON.parse(localStorage.getItem("itens"))
+    }
+    let novoOb = []
+    if (localStorage.length > 0) {
+        for (var i = 0; i < ob.length; i++) {
+            // console.log(localStorage.getItem(localStorage.key(i)));
+            // console.log(key)
+            if (key === ob[i].name) {
+                // console.log(ob[i].name)
+                delete ob[i];
+                Toastify({
+                    text: "Excluido com sucesso!",
+                    className: "info",
+                    style: {
+                        background: "red",
+                    },
+                    duration: 3000
+                }).showToast();
+                break
+
+            }
+            // console.log(ob[i])
+            // console.log(lista[i])
+
+            // }
+            // let ob = JSON.parse(lista);
+            // for (let i = 0; i < ob.length; i++) {
+            //     console.log(ob[i].name)
+        }
+        for (let i = 0; i < ob.length; i++) {
+            if (ob[i] !== undefined) {
+                novoOb.push(ob[i])
+
+            }
+        }
+        localStorage.setItem("itens", JSON.stringify(novoOb))
+
+        listarTabela()
+            // localStorage.setItem("itens", JSON.stringify(itens))
+
+    }
+}
+
+
+
 // Está função é a que salva os novos curso e salva as edições de cada curso 
 function salvar() {
 
