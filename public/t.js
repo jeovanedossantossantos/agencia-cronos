@@ -17,6 +17,91 @@ let itens = new Array()
 if (localStorage.hasOwnProperty("itens")) {
     itens = JSON.parse(localStorage.getItem("itens"))
 }
+
+// Variavel global para verificar o nome do curso (key = chave)
+let key = ''
+    // Função que recebe o nome do curso 
+function setNameEdicao(key) {
+    this.key = key
+}
+// Função que pega a o nome do curso 
+function getNameEdicao() {
+    return this.key
+}
+
+// Está função é a que salva os novos curso e salva as edições de cada curso 
+function salvar() {
+
+
+    let tipo = ''
+    let ob = JSON.parse(localStorage.getItem(localStorage.key(0)));
+
+    let novoOb = []
+
+    if (localStorage.length > 0 && getNameEdicao() !== undefined) {
+
+        if ((nomeED.value !== '') && (descricaoED.value !== '') && (linkImagemED.value !== '')) {
+            for (var i = 0; i < ob.length; i++) {
+                if (getNameEdicao() === ob[i].name) {
+
+                    ob[i].name = nomeED.value
+                    ob[i].image = linkImagemED.value
+                    ob[i].descricao = descricaoED.value
+
+
+                    break
+
+                }
+
+            }
+        } else {
+            alert("Prencha os campos Editar!")
+        }
+        for (let i = 0; i < ob.length; i++) {
+            if (ob[i] !== undefined) {
+                novoOb.push(ob[i])
+
+            }
+        }
+        // alert(JSON.stringify(novoOb))
+        localStorage.setItem("itens", JSON.stringify(novoOb))
+
+        nomeED.value = ""
+        descricaoED.value = ""
+
+
+
+    } else {
+        for (let i = 0; i < ob.length; i++) {
+            if (ob[i] !== undefined) {
+                novoOb.push(ob[i])
+
+            }
+        }
+        if ((nome.value !== '') && (descricao.value !== '') && (linkImagem.value !== '')) {
+            novoOb.push({
+                name: nome.value,
+                image: linkImagem.value,
+                descricao: descricao.value
+            })
+
+            tipo = "salva"
+
+
+
+        } else {
+            alert("Prencha os campos!")
+        }
+
+        localStorage.setItem("itens", JSON.stringify(novoOb))
+
+    }
+
+    listarTabela()
+
+
+}
+
 // Função que chama o modal para fazer a edição 
 function editar(key) {
     setNameEdicao(key)
