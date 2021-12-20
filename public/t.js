@@ -17,9 +17,15 @@ let itens = new Array()
 if (localStorage.hasOwnProperty("itens")) {
     itens = JSON.parse(localStorage.getItem("itens"))
 }
+// Função que chama o modal para fazer a edição 
+function editar(key) {
+    setNameEdicao(key)
+    $('#edicao').modal('show'); //use JQuery
 
+
+}
 // Função que vai mostra todas os cursos
-function listarTabela(d = null) {
+function listarTabela() {
 
     tbody.innerHTML = ""
     if (itens.length === 0) {
