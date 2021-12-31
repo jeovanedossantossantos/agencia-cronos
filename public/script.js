@@ -30,6 +30,8 @@ function getNameEdicao() {
 }
 
 // Função que exclui os cursos
+
+
 function excluir(key) {
 
     // let lista = []
