@@ -57,6 +57,10 @@ CHECKLIST DE REQUISITOS MÍNIMOS PARA ENTREGA:
   <img src="https://github.com/GiseleCorreia/Cronos-logica/blob/main/So_h/imagens/ilustra-banner.png"/>
 </h1>
 
+
+Você pode acessar o projeto clicando [Aqui](https://cronosagencia.herokuapp.com/), onde o código fonte está hospedado.
+
+
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
@@ -133,3 +137,4 @@ SOFTWARE.
 Feito por Gisele Correia 👋🏽 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Gisele-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/maria-gisele-correia-53180483/)](https://www.linkedin.com/in/maria-gisele-correia-53180483/) [![Gmail Badge](https://img.shields.io/badge/-mariagisele12@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mariagisele12@gmail.com)](mailto:mariagisele12@gmail.com)
+
