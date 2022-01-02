@@ -59,7 +59,7 @@ CHECKLIST DE REQUISITOS MÍNIMOS PARA ENTREGA:
 
 
 <p>
-Você pode acessar o projeto clicando <a href='https://cronosagencia.herokuapp.com' target="_blank">Aqui</a> , onde o código fonte está hospedado, na plataforma Heroku.
+Você pode acessar o projeto clicando [Aqui]('https://cronosagencia.herokuapp.com'){:target="_blank"}, onde o código fonte está hospedado, na plataforma Heroku.
 </p>
 
 
