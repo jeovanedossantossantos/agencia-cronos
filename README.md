@@ -49,7 +49,7 @@ CHECKLIST DE REQUISITOS MÍNIMOS PARA ENTREGA:
 - [x] Função Editar
 - [x] Renderização no ReactJs
 - [x] Readme
-- [ ] Criar uma forma de armazenamento de imagens
+- [x] Hospedar o site em uma plataforma
 
 ### Demonstração da aplicação
 
