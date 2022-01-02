@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <img src="https://github.com/GiseleCorreia/Cronos-logica/blob/main/So_h/imagens/banner-marketing.png"/>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Agência CRONOS
 
-## Available Scripts
+## Descrição do Projeto
+<p>Projeto desenvolvido para o desafio da Gama Academy onde a proposta foi utilizar HTML, CSS, Lógica de programação, Javascript e React. Pois precisa-se funcionalidades para criar, editar e deletar serviços da lista (o famoso CRUD).
 
-In the project directory, you can run:
+CHECKLIST DE REQUISITOS MÍNIMOS PARA ENTREGA:
 
-### `yarn start`
+- Todos os códigos deverão estar em um repositório no Github de acesso público com todos os integrantes incluídos como colaboradores..
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Renderizar a página utilizando React.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Ao carregar a página deve exibir a lista de serviços dinamicamente.
 
-### `yarn test`
+- Ao clicar no botão adicionar novo, deve exibir o formulário de cadastro de serviço.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Ao clicar no botão editar, deve exibir o formulário preenchido com os dados do serviço escolhido e guardar as alterações quando clicar no botão salvar.
 
-### `yarn build`
+- Ao clicar no botão excluir, deve remover o serviço escolhido.</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h1 align="center">
+    <a href="https://pt-br.reactjs.org/">🔗 React</a>
+</h1>
+<p align="center"> lib para construir interfaces do usuário com componentes reutilizáveis</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="https://img.shields.io/badge/npm-8.1.2-blue"/> <img src="https://img.shields.io/badge/license-MIT-green"/>
 
-### `yarn eject`
+### Tabela de conteúdos
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p align="center">
+ <a href="#objetivo">Descrição</a> •
+ <a href="#tecnologias">Tecnologias</a> • 
+ <a href="#contribuicao">Contribuição</a> • 
+ <a href="#licenc-a">Licença</a> • 
+ <a href="#autor">Autor</a>
+</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 	🚧  React Select Em construção...  🚧
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [x] Função Salvar
+- [x] Função Excluir
+- [x] Função Mostra Cursos
+- [x] Função Editar
+- [x] Renderização no ReactJs
+- [x] Readme
+- [ ] Criar uma forma de armazenamento de imagens
 
-## Learn More
+### Demonstração da aplicação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h1 align="center">
+  <img src="https://github.com/GiseleCorreia/Cronos-logica/blob/main/So_h/imagens/ilustra-banner.png"/>
+</h1>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Pré-requisitos
 
-### Code Splitting
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com),[React](https://pt-br.reactjs.org/), [jQuery](https://jquery.com/) 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 🎲 Rodando a aplicação
 
-### Analyzing the Bundle Size
+```bash
+# Clone este repositório
+$ git clone <https://github.com/jeovanedossantossantos/agencia-cronos.git>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Acesse a pasta do projeto no terminal/cmd
+$ cd agencia-cronos
 
-### Making a Progressive Web App
+# Instale as dependências
+$ yarn install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start
 
-### Advanced Configuration
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 🛠 Tecnologias
 
-### Deployment
+As seguintes ferramentas foram usadas na construção do projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [Bootstrap](https://getbootstrap.com/)
+- [React](https://pt-br.reactjs.org/)
+- [Git](https://git-scm.com)
+- [VSCode](https://code.visualstudio.com/)
+- [jQuery](https://jquery.com/)
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ✅ Contribuição
+[<img src="https://avatars.githubusercontent.com/u/60934938?v=4=" width=115 > <br> <sub> Jeovane dos Santos </sub>](https://github.com/jeovanedossantossantos) |
+| :---: |
+
+[<img src="https://avatars.githubusercontent.com/u/66260886?v=4" width=115 > <br> <sub> Gisele Correia </sub>](https://github.com/GiseleCorreia) |
+| :---: |
+
+[<img src="https://avatars.githubusercontent.com/u/73408388?v=4=" width=115 > <br> <sub> Bruno P. Brito </sub>](https://github.com/brunopbrito31) |
+| :---: | 
+
+
+### License
+
+MIT License
+Copyright (c) 2021 Gisele Correia, Jeovane Santos, Bruno Brito
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+### Autor
+[<img src="https://avatars.githubusercontent.com/u/66260886?v=4" width=115 > <br> <sub> Gisele Correia </sub>](https://github.com/GiseleCorreia) |
+| :---: |  
+
+Feito por Gisele Correia 👋🏽 Entre em contato!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Gisele-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/maria-gisele-correia-53180483/)](https://www.linkedin.com/in/maria-gisele-correia-53180483/) [![Gmail Badge](https://img.shields.io/badge/-mariagisele12@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mariagisele12@gmail.com)](mailto:mariagisele12@gmail.com)
