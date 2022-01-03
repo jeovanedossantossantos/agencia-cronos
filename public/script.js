@@ -59,13 +59,7 @@ function excluir(key) {
                 break
 
             }
-            // console.log(ob[i])
-            // console.log(lista[i])
 
-            // }
-            // let ob = JSON.parse(lista);
-            // for (let i = 0; i < ob.length; i++) {
-            //     console.log(ob[i].name)
         }
         for (let i = 0; i < ob.length; i++) {
             if (ob[i] !== undefined) {
@@ -76,7 +70,7 @@ function excluir(key) {
         localStorage.setItem("itens", JSON.stringify(novoOb))
 
         listarTabela()
-            // localStorage.setItem("itens", JSON.stringify(itens))
+
 
     }
 }
@@ -117,7 +111,7 @@ function salvar() {
 
             }
         }
-        // alert(JSON.stringify(novoOb))
+
         localStorage.setItem("itens", JSON.stringify(novoOb))
 
         nomeED.value = ""
@@ -194,7 +188,7 @@ function listarTabela() {
             lista.push(localStorage.getItem(localStorage.key(i)))
 
         }
-        console.log(lista)
+
         let ob = JSON.parse(lista);
 
         for (let i = 0; i < ob.length; i++) {
