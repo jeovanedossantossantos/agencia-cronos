@@ -20,9 +20,11 @@ if (localStorage.hasOwnProperty("itens")) {
 
 // Variavel global para verificar o nome do curso (key = chave)
 let key = ''
-    // Função que recebe o nome do curso 
+
+// Função que recebe o nome do curso 
 function setNameEdicao(key) {
     this.key = key
+    this.keyEditor = 1
 }
 // Função que pega a o nome do curso 
 function getNameEdicao() {
@@ -77,8 +79,17 @@ function excluir(key) {
 
 
 
+function delay(n) {
+    return new Promise(function(resolve) {
+
+        setTimeout(resolve, n * 1000);
+    });
+}
 // Está função é a que salva os novos curso e salva as edições de cada curso 
-function salvar() {
+async function salvar() {
+
+
+
 
 
     let tipo = ''
@@ -137,15 +148,21 @@ function salvar() {
 
 
 
+
         } else {
             alert("Prencha os campos!")
         }
 
         localStorage.setItem("itens", JSON.stringify(novoOb))
 
+
     }
 
     listarTabela()
+
+
+
+
 
 
 }
@@ -153,26 +170,31 @@ function salvar() {
 // Função que chama o modal para fazer a edição 
 function editar(key) {
     setNameEdicao(key)
-    
+
     let nomeCurso = document.getElementById('cronosNameED');
     let imagemCurso = document.getElementById('cronosImageED');
     let descricaoCurso = document.getElementById('cronosDesED');
-    
+
     let cursos = JSON.parse(localStorage.getItem('itens'));
-    
-    let cursosAux = cursos.filter((item)=>{
+
+    let cursosAux = cursos.filter((item) => {
         return item.name === key
     })
     let cursoAlvo = cursosAux[0];
-    
+
     nomeCurso.value = cursoAlvo.name;
-    imagemCurso.value = cursoAlvo.descricao;
+    imagemCurso.value = cursoAlvo.image;
     descricaoCurso.value = cursoAlvo.descricao;
-    
+
     $('#edicao').modal('show'); //use JQuery
 }
+
 // Função que vai mostra todas os cursos
 function listarTabela() {
+
+
+
+
 
     tbody.innerHTML = ""
     if (itens.length === 0) {
@@ -253,6 +275,8 @@ function listarTabela() {
     } else {
         alert("Erro!")
     }
+
+
 }
 
 listarTabela()
