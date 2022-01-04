@@ -153,9 +153,23 @@ function salvar() {
 // Função que chama o modal para fazer a edição 
 function editar(key) {
     setNameEdicao(key)
+    
+    let nomeCurso = document.getElementById('cronosNameED');
+    let imagemCurso = document.getElementById('cronosImageED');
+    let descricaoCurso = document.getElementById('cronosDesED');
+    
+    let cursos = JSON.parse(localStorage.getItem('itens'));
+    
+    let cursosAux = cursos.filter((item)=>{
+        return item.name === key
+    })
+    let cursoAlvo = cursosAux[0];
+    
+    nomeCurso.value = cursoAlvo.name;
+    imagemCurso.value = cursoAlvo.descricao;
+    descricaoCurso.value = cursoAlvo.descricao;
+    
     $('#edicao').modal('show'); //use JQuery
-
-
 }
 // Função que vai mostra todas os cursos
 function listarTabela() {
